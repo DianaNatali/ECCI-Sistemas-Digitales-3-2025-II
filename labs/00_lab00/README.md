@@ -11,7 +11,7 @@ En este laboratorio nos enfocaremos en la instalación y configuración de las h
 
 2. Seguir las instrucciones del instalador para completar la instalación.
 
-3. Una vez instalado, abrir ```VS Code``` y explora las extensiones disponibles en el marketplace.
+3. Una vez instalado, abrir ```VS Code``` y explorar las extensiones disponibles en el marketplace.
 
 
 ## 2. ```Git``` y GitHub

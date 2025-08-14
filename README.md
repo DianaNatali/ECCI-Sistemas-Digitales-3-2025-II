@@ -37,5 +37,6 @@ El curso se centra en la integración de dos componentes clave: un microcontrola
     <td>Instalación de herramientas</td>
     <td><a href="/labs/00_lab00/README.md">lab00</a></td>
     <td>-</td>
+    <td>-</td>
   </tr>
 </table>

@@ -4,7 +4,7 @@
 
 Desarrollar un sistema de directorio telefónico utilizando programación orientada a objetos (POO) en Python. Se utilizarán clases para modelar contactos, listas para almacenarlos y diccionarios para optimizar las búsquedas. El programa debe permitir agregar, buscar, eliminar y mostrar contactos, además de incluir validaciones de datos y persistencia en archivos ```JSON``` o ```CSV```.
 
-## 2. Objetivos de Aprendizaje:
+## 2. Objetivos de aprendizaje:
 
 * Comprender la estructura y el uso de clases en Python para modelar entidades.
 

@@ -39,4 +39,11 @@ El curso se centra en la integración de dos componentes clave: un microcontrola
     <td>-</td>
     <td>-</td>
   </tr>
+  <tr>
+    <td>2-3</td>
+    <td>Directorio telefónico</td>
+    <td><a href="/labs/01_lab01/README.md">lab01</a></td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
 </table>

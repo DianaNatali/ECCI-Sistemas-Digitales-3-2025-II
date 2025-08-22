@@ -165,7 +165,7 @@ Manejar la interacción con el usuario final
 
     * Diagrama de clases
 
-    * Explicación de las validaciones
+    * Explicación detallada de cada clase y método
 
     * Instrucciones de uso
 

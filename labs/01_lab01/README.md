@@ -18,85 +18,158 @@ Desarrollar un sistema de directorio telefónico utilizando programación orient
 
 ## 3. Requerimientos
 
-1. Clase ```Contacto```:
+### 3.1 Clase ```Contacto```: 
 
-    * ```Atributos```: 
+Representar la entidad fundamental del sistema.
 
-        * ```id```: Identificador único del contacto.
-        * ```nombre```: Nombre completo del contacto.
-        * ```telefono```: Número de teléfono de 10 dígitos.
-        * ```fecha_nacimiento```: Fecha de nacimiento del contacto (debe ser válido).
-        * ```correo```: Correo electrónico (debe ser válido).
-        * ```area```: Área dentro de una empresa o institución a la que pertenece el contacto.
+* **Atributos**: 
 
-    * ```Métodos```: 
-        * ```__str__()```:  Devuelve una representación formateada del contacto. 
-
-2. Clase ```Directorio```:
-
-    * ```Atributos```:
-
-        * ```contactos```: Lista para almacenar objetos ```Contacto```.
-
-        * ```indice_telefonos```: Diccionario para indexar contactos por su número de teléfono.
-
-        * ```indice_ids```: Diccionario para indexar contactos por su ID único.
-
-        * ```indice_areas```: Diccionario para indexar contactos por área.
-
-        * ```areas```: Área dentro de la empresa a la que pertenece el contacto (seleccionada de una lista predefinida).
-
-    * ```Métodos```:
-
-        * ```agregar_contacto()```:  Agrega un contacto validando los datos y guardándolo automáticamente.
-
-        * ```agregar_area()```: Permite agregar una nueva área predefinida.
-
-        * ```seleccionar_area()```: Permite al usuario elegir un área de una lista numerada
-
-        * ```buscar_por_telefono()```: Busca un contacto por número de teléfono.
-
-        * ```buscar_por_id()```: Busca un contacto por su ID único.
-
-        * ```buscar_por_area()```: Busca contactos por área dentro de la empresa.
-
-        * ```eliminar_contacto_id()```: Elimina un contacto usando su ID único.
-
-        * ```eliminar_contacto_tel()```: Elimina un contacto por número de teléfono.
-
-        * ```mostrar_contactos()```: Muestra todos los contactos ordenados alfabéticamente.
-
-        * ```cargar_datos```: Carga los contactos desde un archivo ```JSON``` o ```csv```.
-
-3. Validaciones:
-
-    * ```validar_telefono()```: Verifica que el número contenga exactamente 10 dígitos.
-
-    * ```validar_correo()```: Confirma que el correo tenga un formato correcto.
-
-    * ```validar_fecha_nacimiento()```: Asegura que la fecha ingresada cumpla con el formato YYYY-MM-DD.
-
-4. Persistencia de datos: Guardar y cargar los contactos en un archivo ```JSON``` o ```csv```.
+    | Nombre | Tipo | Descripción |
+    |----------|----------|----------|
+    | ```id``` | ```int```|Identificador único del contacto.   |
+    |```nombre```   | ```str```  | Nombre completo (mínimo 2 palabras)   |
+    | ```telefono```    | ```str```   | Exactamente 10 dígitos numéricos|
+    | ```fecha_nacimiento```    | ```str```   | Formato ISO 8601: ```YYYY-MM-DD```|
+    | ```correo```    | ```str```   | Formato email válido (RFC 5322)|
+    | ```area```    | ```str```   | Área organizacional válida|
 
 
-## 4. Actividades
+* **Métodos**: 
+    * ```__init__()```: Constructor con validaciones básicas.
+    * ```__str__()```:  Devuelve una representación formateada del contacto:
 
-  1. Diseño de clases: Definir las clases ```Contacto``` y ```Directorio``` con sus atributos y métodos.
+        Representación formal: ```ID: 1 | Juan Pérez | 📞 5512345678 | Ventas```
 
-  2. Implementación de métodos: Implementar los métodos de la clases para gestionar los contactos.
+    * ```to_dict()```: Serialización a diccionario para persistencia
 
-  3. Validaciones: Implementar las funciones de validación y úsalas en el método agregar_contacto.
+### 3.2 Clase ```Directorio```:
 
-  4. Persistencia de datos: Implementar los métodos ```guardar_datos``` y ```cargar_datos```.
+Gestionar la colección de contactos y operaciones.
 
-  5. Interfaz de Usuario: Crear un menú interactivo para que el usuario pueda usar el directorio.
+* **Atributos**:
 
-  6. Pruebas: Probar todas las funcionalidades del programa y corregir los errores.
+    * ```contactos```: Lista para almacenar objetos ```Contacto```.
+
+    * ```indice_telefonos```: Diccionario para indexar contactos por su número de teléfono.
+
+    * ```indice_ids```: Diccionario para indexar contactos por su ID único.
+
+    * ```indice_areas```: Diccionario para indexar contactos por área.
+
+    * ```areas```: Área dentro de la empresa a la que pertenece el contacto (seleccionada de una lista predefinida).
+
+* **Métodos principales**:
+
+    * ```agregar_contacto()```:  Agrega un contacto validando los datos y guardándolo automáticamente.
+
+    * ```buscar_por_telefono()```: Busca un contacto por número de teléfono.
+
+    * ```buscar_por_id()```: Busca un contacto por su ID único.
+
+    * ```buscar_por_area()```: Busca contactos por área dentro de la empresa.
+
+    * ```eliminar_contacto()```: Elimina por ID o teléfono, manteniendo consistencia de índices
+
+    * ```mostrar_contactos()```: Muestra todos los contactos ordenados alfabéticamente.
+
+* **Métodos de gestión de área**:
+
+    * ```agregar_area()```: Permite agregar una nueva área predefinida.
+
+    * ```seleccionar_area()```: Permite al usuario elegir un área de una lista numerada
+
+* **Persistencia**:
+
+    * ```guardar_datos```:  Guarda los datos en archivo ```JSON``` o ```csv```.
+
+    → **Estrategia de persistencia**:
+    
+    - Formato JSON (Recomendado):
+
+    ```
+    [
+      {
+        "id": 1,
+        "nombre": "Juan Pérez",
+        "telefono": "5512345678",
+        "fecha_nacimiento": "1990-05-15",
+        "correo": "juan@empresa.com",
+        "area": "Ventas"
+      }
+    ]
+    ```
+
+    - Formato CSV:
+
+    ```
+    id,nombre,telefono,fecha_nacimiento,correo,area
+    1,Juan Pérez,5512345678,1990-05-15,juan@empresa.com,Ventas
+    ```
+
+### 3.3 Clase ```InterfazUsuario```
+
+Manejar la interacción con el usuario final
+
+* **Atributos**
+
+    * ```directorio```: Instancia de la clase Directorio
+
+* **Métodos Principales**
+
+    * **Métodos de Navegación**
+
+        * ```mostrar_menu_principal()```: Muestra las opciones principales
+
+        * ```ejecutar()```: Bucle principal que controla la ejecución
+
+    * **Métodos de Entrada**
+
+        * ```leer_opcion()```: Lee y valida una opción del menú
+
+        * ```leer_dato()```: Lee un dato simple del usuario
+
+
+### 3.3 Validaciones:
+
+* ```validar_nombre()```:     
+
+    * Mínimo 2 palabras (nombre y apellido)
+
+    * Longitud mínima: 5 caracteres
+
+    * Solo caracteres alfabéticos y espacios
+
+* ```validar_telefono()```: 
+
+    * Longitud exacta: 10 caracteres
+    
+    * Solo dígitos numéricos (0-9)
+
+* ```validar_correo()```: Confirma que el correo tenga un formato correcto: ```usuario@dominio.extension```.
+
+* ```validar_fecha_nacimiento()```: 
+
+    *  Formato ISO 8601: ```YYYY-MM-DD```
+
+    * Rango válido: 1925-01-01 a fecha actual
+
+    * Días válidos según mes y año
+
+
 
 ## Entregables
 
-  1. Código fuente: Subir al repositorio el archivo ```Python``` con el código completo del programa.
+1. Código fuente completo (archivo ```.py```).
 
-  2. Documentación: En el respectivo ```README.md``` de **Github Classroom** escribir una documentación técnica describiendo las funcionalidades implementadas y los desafíos encontrados.
+2. Documentación técnica en ```README.md con```:
 
+    * Diagrama de clases
+
+    * Explicación de las validaciones
+
+    * Instrucciones de uso
+
+3. Archivos de persistencia de ejemplo (JSON/CSV)
+
+4. Casos de prueba implementados
   

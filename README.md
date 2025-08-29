@@ -44,13 +44,13 @@ El curso se centra en la integración de dos componentes clave: un microcontrola
     <td>Directorio telefónico</td>
     <td><a href="/labs/01_lab01/README.md">lab01</a></td>
     <td><a href= "https://classroom.github.com/a/tJuprggg">Link</a></td>
-    <td>-</td>
+    <td>29 Agosto</td>
   </tr>
   <tr>
     <td>4</td>
     <td>Introducción a Raspberry Pi </td>
     <td><a href="/labs/02_lab02/README.md">lab02</a></td>
     <td><a href= "">Link</a></td>
-    <td>-</td>
+    <td>29 Agosto</td>
   </tr>
 </table>

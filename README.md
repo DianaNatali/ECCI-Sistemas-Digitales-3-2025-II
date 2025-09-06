@@ -55,9 +55,9 @@ El curso se centra en la integración de dos componentes clave: un microcontrola
   </tr>
   <tr>
     <td>5</td>
-    <td>Visualización de datos con Matplotlib en Raspberry Pi con VNC Viewer </td>
+    <td>Visualización de datos en Raspberry Pi con Python y Matplotlib </td>
     <td><a href="/labs/03_lab03/README.md">lab03</a></td>
-    <td><a href= "">Link</a></td>
+    <td><a href= "https://classroom.github.com/a/mEuuhjlP">Link</a></td>
     <td>05 septiembre</td>
   </tr>
 </table>

@@ -22,6 +22,8 @@ El curso se centra en la integración de dos componentes clave: un microcontrola
 
 4. Integración de sistemas: Los estudiantes desarrollarán soluciones que integren un microcontrolador y una SBC, permitiendo la visualización de datos en tiempo real y su publicación en la nube mediante APIs REST.
 
+Hola mundo
+
 ## Cronograma
 
 <table>

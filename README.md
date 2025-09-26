@@ -68,7 +68,6 @@ Hola mundo
     <td><a href="https://classroom.github.com/a/BKx7Zx61">Link </a></td>
     <td>26 septiembre</td>
   </tr>
-</table>
 <tr>
     <td>8</td>
     <td>  MQTT en Raspberry Pi + microcontrolador con Micropython </td>

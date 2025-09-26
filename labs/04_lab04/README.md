@@ -1,24 +1,23 @@
-# Lab04: Visualización de datos en Raspberry Pi con Node-RED y Python
+# Lab04: Visualización de datos en Raspberry Pi con Node-RED 
 
-## Objetivo de aprendizaje
+Índice:
+
+1. [Objetivos de aprendizaje](#1-objetivo-de-aprendizaje)
+2. [Introducción](#2-introducción)
+3. [Requisitos](#3-requisitos)
+4. [Procedimiento](#4-procedimiento)
+4.1 [Parte 1](#41-parte-1-instalación-y-configuracón-de-node-red)
+4.2 [Parte 2](#42-parte-2--crear-un-flujo-en-node-red)
+5. [Entregables](#5-entregables)
+
+
+------------------------------------------------------
+
+## 1. Objetivo de aprendizaje
 
 Desarrollar un flujo en Node-RED que permita seleccionar un color mediante un selector de color, visualizar los valores RGB en un campo de texto y almacenarlos en un archivo de texto. Posteriormente, crear un script en Python que lea este archivo y procese los valores RGB.
 
-## Requisitos
-
-* Hardware: Raspberry Pi Zero W con Raspberry Pi OS instalado.
-
-* Software:
-
-    * ```Node-RED```
-
-    * Python 3
-
-    * Biblioteca ```RPi.GPIO``` (si se desea controlar hardware)
-
-    * Navegador web para acceder a ```Node-RED```
-
-## Introducción
+## 2. Introducción
 
 ```Node-RED``` es una herramienta de programación visual basada en flujos, diseñada para conectar dispositivos, APIs y servicios en línea de manera sencilla.```Node-RED``` permite a los usuarios crear aplicaciones mediante una interfaz gráfica donde se arrastran y conectan nodos que representan funciones o servicios.
 
@@ -26,9 +25,27 @@ Desarrollar un flujo en Node-RED que permita seleccionar un color mediante un se
 
 ```npm``` (Node Package Manager) es el gestor de paquetes por defecto para ```Node.js```. Permite a los desarrolladores instalar, actualizar y gestionar bibliotecas y módulos que extienden la funcionalidad de sus aplicaciones. npm facilita la integración de miles de paquetes disponibles en su repositorio, lo que permite a los usuarios añadir fácilmente nuevas funcionalidades a sus proyectos.
 
-## Procedimiento
+## 3. Requisitos
 
-### Parte 1: Instalación y configuracón de Node-RED:
+### Software
+1. Sistema operativo Raspberry Pi OS correctamente instalado y configurado.
+
+2. Acceso ```SSH``` habilitado en la Raspberry Pi.
+
+3. ```Node.js``` y ```npm``` (serán instalados durante el laboratorio).
+
+4. Node-RED (será instalado durante el laboratorio).
+
+5. Python 3 instalado en la Raspberry Pi.
+
+
+### Conexión de red
+
+Raspberry Pi y computador local conectados a la misma red local para la comunicación mediante SSH y acceso a la interfaz web de Node-RED.
+
+## 4. Procedimiento
+
+### 4.1 Parte 1: Instalación y configuracón de Node-RED:
 
 #### 1. Conexión por SSH a la Raspberry Pi:
 
@@ -184,7 +201,7 @@ Una vez que inicie la Raspberry Pi podrá acceder a la interfaz de ```Node-RED``
 
 
 
-### Parte 2:  Crear un flujo en Node-RED 
+### 4.2 Parte 2:  Crear un flujo en Node-RED 
 
 #### Introducción:
 
@@ -267,7 +284,11 @@ La interfaz de ```Node-RED``` es una plataforma visual que permite crear aplicac
         ![node-red6](/labs/figs/lab04/flujo.png)
 
 
+## 5. Entregables
 
+1. Código fuente: Subir al repositorio el archivo ```.json``` con el flujo implementado en Node-RED.
+
+2. Documentación: En el respectivo ```README.md``` de Github Classroom escribir una documentación técnica describiendo el procedimiento llevado a cabo y los resultados obtenidos.
 
 
 

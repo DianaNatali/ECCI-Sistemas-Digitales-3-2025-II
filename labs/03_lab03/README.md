@@ -6,7 +6,7 @@ Desarrollar un programa en Python que simule la lectura de un sensor y grafique 
 
 ## Requisitos
 
-* Raspberry Pi Zero W con Raspberry Pi OS instalado.
+* Raspberry Pi con Raspberry Pi OS instalado.
 
 * Conexión a red local (Wi-Fi o Ethernet).
 
@@ -96,4 +96,4 @@ Los siguientes pasos se ejecutar conectando una pantalla HDMI, un mouse y un tec
 
 1. Código fuente: Subir al repositorio el archivo Python con el código completo del programa.
 
-2. Documentación: En el respectivo README.md de Github Classroom escribir una documentación técnica describiendo las funcionalidades implementadas y los desafíos encontrados.
+2. Documentación: En el respectivo ```README.md``` de Github Classroom escribir una documentación técnica describiendo las funcionalidades implementadas y los desafíos encontrados.

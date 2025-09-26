@@ -63,9 +63,17 @@ Hola mundo
     <td>05 septiembre</td>
   <tr>
     <td>6-7</td>
-    <td>  Visualización de Datos en Raspberry Pi con Node-RED y Python </td>
+    <td>  Visualización de Datos en Raspberry Pi con Node-RED  </td>
     <td><a href="/labs/04_lab04/README.md">lab04</a></td>
-    <td><a href="">Link </a></td>
-    <td>25 Abr/2025</td>
+    <td><a href="https://classroom.github.com/a/BKx7Zx61">Link </a></td>
+    <td>26 septiembre</td>
+  </tr>
+</table>
+<tr>
+    <td>8</td>
+    <td>  MQTT en Raspberry Pi + microcontrolador con Micropython </td>
+    <td><a href="/labs/05_lab05/README.md">lab05</a></td>
+    <td><a href="https://classroom.github.com/a/sYM9ycqv">Link </a></td>
+    <td>03 octubre</td>
   </tr>
 </table>

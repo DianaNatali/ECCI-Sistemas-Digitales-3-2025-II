@@ -171,9 +171,9 @@ Raspberry Pi y computador local conectados a la misma red local para la comunica
 
     4. Configurar el *topic* en los nodos, por ejemplo: 
 
-        * En el nodo **mqtt in** ```pico/sesnor/color```.
+        * En el nodo **mqtt in** ```micro/sensor/color```.
 
-        * En el nodo **mqtt out** ```pico/input/color```.
+        * En el nodo **mqtt out** ```micro/led/control```.
 
     Si la configuración fue correcta deberá ver:
 

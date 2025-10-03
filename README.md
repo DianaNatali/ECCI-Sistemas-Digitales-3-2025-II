@@ -75,4 +75,11 @@ Hola mundo
     <td><a href="https://classroom.github.com/a/sYM9ycqv">Link </a></td>
     <td>03 octubre</td>
   </tr>
+  <tr>
+    <td>9</td>
+    <td>  Servidor MQTT en Raspberry Pi con IP pública (ngrok) y cliente ESP32 con sensor HDC1080 </td>
+    <td><a href="/labs/05_lab05/README.md">lab05</a></td>
+    <td><a href="">Link </a></td>
+    <td>10 octubre</td>
+  </tr>
 </table>

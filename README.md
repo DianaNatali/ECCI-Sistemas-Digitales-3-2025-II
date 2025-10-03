@@ -77,8 +77,8 @@ Hola mundo
   </tr>
   <tr>
     <td>9</td>
-    <td>  Servidor MQTT en Raspberry Pi con IP pública (ngrok) y cliente ESP32 con sensor HDC1080 </td>
-    <td><a href="/labs/05_lab05/README.md">lab05</a></td>
+    <td>  Servidor MQTT en Raspberry Pi con IP pública (ngrok) y cliente ESP32 con sensor LM75 </td>
+    <td><a href="/labs/06_lab06/README.md">lab05</a></td>
     <td><a href="">Link </a></td>
     <td>10 octubre</td>
   </tr>

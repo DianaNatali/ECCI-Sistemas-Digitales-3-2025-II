@@ -31,11 +31,11 @@ La arquitectura general del sistema es la siguiente:
 2. Paso 2 – Instalar ngrok
 
     ```
+    curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null
+    echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list
     sudo apt update
-    sudo apt install unzip -y
-    wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
-    unzip ngrok-stable-linux-arm.zip
-    sudo mv ngrok /usr/local/bin/
+    sudo apt install ngrok
+
     ```
 
 3. Paso 3 – Configurar el token
